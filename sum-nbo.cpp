@@ -13,7 +13,7 @@ uint32_t my_bin32(unsigned char buffer[]){
     uint32_t tmp = 0x00000000;
     for (int i=0;i<4;i++){
         tmp += buffer[i] << (8*i);
-        printf("%08x\n",tmp);
+        //printf("%08x\n",tmp);
     }
     return htonl(tmp);
 }
