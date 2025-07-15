@@ -12,10 +12,10 @@ using namespace::std;
 uint32_t my_bin32(unsigned char buffer[]){
     uint32_t tmp = 0x00000000;
     for (int i=0;i<4;i++){
-        tmp += (buffer[i] << (24- (i*8)));
-        //printf("%08x\n",tmp);
+        tmp += buffer[i] << (8*i);
+        printf("%08x\n",tmp);
     }
-    return tmp;
+    return htonl(tmp);
 }
 
 int main(int argc, char *argv[]){
